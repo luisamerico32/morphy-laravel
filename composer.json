@@ -1,0 +1,22 @@
+{
+	"name": "StApostol/morphy-laravel",
+	"description": "Analyze text with morphy on php.",
+	"type": "library",
+	"autoload": {
+		"psr-4": {
+			"Morphy\\": "./src"
+		}
+	},
+	"require": {
+		"illuminate/support": "^6.0|^7.0|^8.0",
+		"makhov/phpmorphy": "dev-master"
+	},
+	"minimum-stability": "dev",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Morphy\\MorphServiceProvider"
+			]
+		}
+	}
+}

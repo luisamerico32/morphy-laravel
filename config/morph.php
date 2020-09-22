@@ -1,0 +1,54 @@
+<?php
+
+return [
+    'de_de' => [
+        'morph' => [
+            'dictionariesFolder' => 'package',
+            'options' => [
+                'storage' => 'file',
+                'predict_by_suffix' => true,
+                'predict_by_db' => true,
+                'graminfo_as_text' => true,
+            ],
+        ],
+        'stopWords' => [
+            'Winzer eG',
+            'Weingut',
+            'Producer',
+        ],
+        'wordParserFilters' => [
+            \Morphy\FuzzyKeywordSearch\StringFilters\StopWordFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\HtmlLineBreaksToSingleBreakFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\StripTagsFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\DotAndCommaToSingleSpaceFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\MultipleLineBreaksToSingleSpaceFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\MultipleSpacesToSingleSpaceFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\RemoveExtraSpacesFilter::class,
+        ],
+        \Morphy\SemanticText\SemanticObjectRepositoryInterface::class => null,
+    ],
+    'en_en' => [
+        'morph' => [
+            'dictionariesFolder' => 'package',
+            'options' => [
+                'storage' => 'file',
+                'predict_by_suffix' => true,
+                'predict_by_db' => true,
+                'graminfo_as_text' => true,
+            ],
+        ],
+        'stopWords' => [
+            'Producer',
+        ],
+        'wordParserFilters' => [
+            \Morphy\FuzzyKeywordSearch\StringFilters\StopWordFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\HtmlLineBreaksToSingleBreakFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\StripTagsFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\DotAndCommaToSingleSpaceFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\MultipleLineBreaksToSingleSpaceFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\MultipleSpacesToSingleSpaceFilter::class,
+            \Morphy\FuzzyKeywordSearch\StringFilters\RemoveExtraSpacesFilter::class,
+        ],
+        \Morphy\SemanticText\SemanticObjectRepositoryInterface::class => null,
+    ],
+];
