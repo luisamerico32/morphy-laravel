@@ -1,22 +1,28 @@
 {
-	"name": "StApostol/morphy-laravel",
+	"name": "stapostol/morphy-laravel",
 	"description": "Analyze text with morphy on php.",
 	"type": "library",
 	"autoload": {
 		"psr-4": {
-			"Morphy\\": "./src"
+			"LaravelMorphy\\": "./src"
 		}
 	},
 	"require": {
 		"illuminate/support": "^6.0|^7.0|^8.0",
-		"makhov/phpmorphy": "dev-master"
+		"stapostol/morph-analyzer": "^0.0.1"
 	},
 	"minimum-stability": "dev",
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Morphy\\MorphServiceProvider"
+				"LaravelMorphy\\MorphServiceProvider"
 			]
 		}
-	}
+	},
+	"repositories": [
+		{
+			"type": "git",
+			"url": "git@github.com:StApostol/morph-analyzer.git"
+		}
+	]
 }

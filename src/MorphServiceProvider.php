@@ -1,6 +1,6 @@
 <?php
 
-namespace Morphy;
+namespace LaravelMorphy;
 
 use Morphy\FuzzyKeywordSearch\StringFilters\StopWordFilter;
 use Morphy\FuzzyKeywordSearch\Analyzer\PresenceGroupsWordsInStringAnalyzer;
@@ -13,10 +13,6 @@ use Morphy\SemanticText\SemanticPresenceInTextAnalyzer;
 
 class MorphServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    public $bindings = [
-        SemanticObjectRepositoryInterface::class => ProducerSemanticRepository::class,
-    ];
-
     public function boot()
     {
         $this->publishes([
