@@ -23,7 +23,7 @@ class MorphServiceProvider extends \Illuminate\Support\ServiceProvider
             $shortLocale = substr($locale, 0, 2);
 
             $this->app->singleton($shortLocale.'PhpMorphy', function () use ($locale, $settings) {
-                $dictionariesFolder = $settings['morph']['dictionariesFolder'] !== 'package' ? $settings['morph']['dictionariesFolder'] : __DIR__.'/dictionaries';
+                $dictionariesFolder = $settings['morph']['dictionariesFolder'] !== 'package' ? $settings['morph']['dictionariesFolder'] : __DIR__.'/../../morph-analyzer/dictionaries';
 
                 return new \phpMorphy(
                     $dictionariesFolder,
