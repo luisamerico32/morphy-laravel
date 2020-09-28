@@ -12,11 +12,12 @@ return [
             ],
         ],
         'stopWords' => [
-            'Winzer eG',
-            'Weingut',
-            'Producer',
+            'winzer eg',
+            'weingut',
+            'producer',
         ],
         'wordParserFilters' => [
+            \Morphy\FuzzyKeywordSearch\StringFilters\StringToLower::class,
             \Morphy\FuzzyKeywordSearch\StringFilters\StopWordFilter::class,
             \Morphy\FuzzyKeywordSearch\StringFilters\HtmlLineBreaksToSingleBreakFilter::class,
             \Morphy\FuzzyKeywordSearch\StringFilters\StripTagsFilter::class,
@@ -41,6 +42,7 @@ return [
             'Producer',
         ],
         'wordParserFilters' => [
+            \Morphy\FuzzyKeywordSearch\StringFilters\StringToLower::class,
             \Morphy\FuzzyKeywordSearch\StringFilters\StopWordFilter::class,
             \Morphy\FuzzyKeywordSearch\StringFilters\HtmlLineBreaksToSingleBreakFilter::class,
             \Morphy\FuzzyKeywordSearch\StringFilters\StripTagsFilter::class,
