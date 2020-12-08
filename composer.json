@@ -9,7 +9,7 @@
 	},
 	"require": {
 		"illuminate/support": "^6.0|^7.0|^8.0",
-		"stapostol/morph-analyzer": "^0.0.1"
+		"resolventa/morphological-search": "^1.0"
 	},
 	"minimum-stability": "dev",
 	"extra": {
@@ -18,11 +18,5 @@
 				"LaravelMorphy\\MorphServiceProvider"
 			]
 		}
-	},
-	"repositories": [
-		{
-			"type": "git",
-			"url": "git@github.com:StApostol/morph-analyzer.git"
-		}
-	]
+	}
 }
