@@ -57,7 +57,9 @@ class MorphServiceProvider extends \Illuminate\Support\ServiceProvider
                 return new SemanticPresenceInTextAnalyzer(
                     new FuzzyKeywordSearcher(new PresenceGroupsWordsInStringAnalyzer()),
                     $this->app->get($shortLocale.'WordCollectionFactory'),
-                    $this->app->get($settings[SemanticObjectRepositoryInterface::class])
+                    $this->app->get($settings[SemanticObjectRepositoryInterface::class]),
+                    cache()->driver($settings['cache']['driver'] ?? 'array'),
+                    $settings['cache'],
                 );
             });
         }

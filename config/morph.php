@@ -27,6 +27,11 @@ return [
             \Morphy\FuzzyKeywordSearch\StringFilters\RemoveExtraSpacesFilter::class,
         ],
         \Morphy\SemanticText\SemanticObjectRepositoryInterface::class => null,
+        'cache' => [
+            'driver' => 'array',
+            'ttl' => 5 * 60,
+            'key' => 'some_key',
+        ],
     ],
     'en_en' => [
         'morph' => [
@@ -52,5 +57,10 @@ return [
             \Morphy\FuzzyKeywordSearch\StringFilters\RemoveExtraSpacesFilter::class,
         ],
         \Morphy\SemanticText\SemanticObjectRepositoryInterface::class => null,
+        'cache' => [
+            'driver' => 'file',
+            'ttl' => 5 * 60,
+            'key' => 'some_key_en',
+        ],
     ],
 ];
